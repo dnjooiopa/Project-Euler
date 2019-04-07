@@ -7,20 +7,21 @@ class PowerDigitSum{
         BigInteger number = new BigInteger("2");
         number  = number.pow(1000);
 
-        System.out.println(digitSum(number));
+        System.out.println(sumDigit(number));
 
     }
 
-    static BigInteger digitSum(BigInteger number){
+    static BigInteger sumDigit(BigInteger number) {
 
-        BigInteger digitSummation = new BigInteger("0");
+        BigInteger zero = new BigInteger("0");
+        BigInteger summation = new BigInteger("0");
         BigInteger ten = new BigInteger("10");
-        while(number.compareTo(new BigInteger("0")) == 1){
-            digitSummation = digitSummation.add(number.mod(ten));
-            number = number.divide(ten);
 
+        while (number.compareTo(zero) == 1) {
+            summation = summation.add(number.mod(ten));
+            number = number.divide(ten);
         }
-        return digitSummation;
+        return summation;
 
     }
 
