@@ -6,7 +6,7 @@ import java.util.Scanner;;
 
 public class LargeSum {
     public static void main(String[] args) {
-        File file = new File("allDigit.txt");
+        File file = new File("text file/allDigit.txt");
         ArrayList<String> digitStr = new ArrayList<>();
         
         try {
