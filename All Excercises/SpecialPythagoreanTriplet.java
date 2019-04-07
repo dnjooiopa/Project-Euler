@@ -4,35 +4,31 @@ class SpecialPythagoreanTriplet{
 
     public static void main(String[] args){
         
-        for(int i = 1000 ; i > 0; i++){
+        int a = 0, b = 0, c = 0;
+        int t = 1000;
+        boolean found = false;
+        for (a = 1; a < t / 3; a++) {
+            for (b = a; b < t / 2; b++) {
+                c = t - a - b;
 
-            for(int j = 1000; j > 0; j--){
+                if (a * a + b * b == c * c) {
+                    found = true;
+                    break;
+                }
+            }
 
-                for(int k = 1000; k > 0; k++)
-                    if(isThousand(i, j, k)){
-
-                        if(isPythagorean(i, j, k))
-                            System.out.println(i + " " + j + " " + k);
-
-                    }       
+            if (found) {
+                break;
             }
         }
 
-    }
-
-    static boolean isPythagorean(int a, int b, int c){
-
-        if(((a*a)+(b*b)==c*c) || ((b*b)+(c*c)== a*a) || ((a*a)+(c*c)==b*b)){
-            return true;
-        }
-
-        return false;
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(a*b*c);
 
     }
 
-    static boolean isThousand(int a, int b, int c){
-        return (a+b+c) == 1000;
-    }
 
 
 }
