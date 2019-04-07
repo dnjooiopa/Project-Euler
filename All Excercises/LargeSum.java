@@ -13,7 +13,6 @@ public class LargeSum {
 
             //Read all digits from file
             Scanner scanner = new Scanner(file);
-            StringBuilder allDigit = new StringBuilder("");
             while (scanner.hasNextLine()) {
                 digitStr.add(scanner.nextLine());
             }

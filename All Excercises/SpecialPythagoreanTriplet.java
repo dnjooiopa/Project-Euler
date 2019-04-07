@@ -14,13 +14,9 @@ class SpecialPythagoreanTriplet{
                         if(isPythagorean(i, j, k))
                             System.out.println(i + " " + j + " " + k);
 
-                    }
-                
-
+                    }       
             }
-
         }
-
 
     }
 
