@@ -42,13 +42,9 @@ class NamesScores {
             }
             System.out.println(sum);
             
-
-
         } catch (FileNotFoundException e) {    
            e.printStackTrace();
         }
-
-
 
     }
 
